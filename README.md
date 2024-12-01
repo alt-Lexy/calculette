@@ -1,10 +1,11 @@
 # sharp
-Ouvrir vscode avec la cmd *. code* dans le répertoire ou se trouve le code  
+Ouvrir vscode avec la cmd _. code_ dans le répertoire ou se trouve le code  
 je tavaille sur la version 9 LTS de dotnet  
-Installer C# dev tool pour plus d'experience  
-Suivre la todo list de l'extension  
-Vous pouvez lancer le programme C# :  
-- en mode debug via *Run and Debug* situé sur la bar a gauche de vscode
-- via le terminal avec la cmd *dotnet run* ou *dotnet build*
+Installer C# dev tool pour plus d'experience via _Extensions_ situé sur la bare à gauche de vscode
+Suivre la todo list de l'extension 
+Pour créer un projet faire _ctrl+maj+p_ > new projet (*.NET*) > console app (*ça peut être un autre projet*) > suivre le reste des instructions.
+Vous pouvez lancer le programme C# (*il vaut mieux être dans le répertoire du prog à lancer*) :  
+- en mode debug via _Run and Debug_ situé sur la bar à gauche de vscode
+- via le terminal avec la cmd _dotnet run_ execution ou _dotnet build_ compilation
 
 NB: j'ai supprimé du code parce qu'il y avait des infos personnelles
