@@ -6,9 +6,8 @@ namespace calculator.Operations
         {
         }
 
-        public override void Excute()
+        public override void Execute()
         {
-            Logger logger = new();
             Resultat = FirstNumber + SecondNumber;
         }
 

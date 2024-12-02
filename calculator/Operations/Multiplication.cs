@@ -6,7 +6,7 @@ namespace calculator.Operations
         {
         }
 
-        public override void Excute()
+        public override void Execute()
         {
             Resultat = FirstNumber * SecondNumber;
         }

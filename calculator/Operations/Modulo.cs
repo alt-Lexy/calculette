@@ -5,7 +5,7 @@ namespace calculator.Operations
         public Modulo(int firstNumber, int secondNumber) : base(firstNumber, secondNumber)
         {
         }
-        public override void Excute()
+        public override void Execute()
         {
             Resultat = FirstNumber % SecondNumber;
         }

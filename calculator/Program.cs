@@ -15,7 +15,7 @@ string sign = Console.ReadLine();
 // je n'utilise pas de List ou List tuple car je connais la taille de mon tableau
 string[] signList = ["+", "-", "/", "*", "%"];
 
-Operation res;
+IOperation res;
 
 if (!signList.Contains(sign))
 {
