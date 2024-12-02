@@ -11,7 +11,8 @@ namespace calculator
         /// Cette méthod permet de logger
         /// </summary>
         /// <param name="valeur"></param>
-        public void Logger( string valeur){
+        public void Logger(string valeur)
+        {
             Console.WriteLine(valeur);
         }
 
@@ -19,42 +20,48 @@ namespace calculator
         /// Cette méthode renvoie le resultat de l'addition de deux nombres et renseigne la props Resultat
         /// </summary>
         /// <returns></returns>
-        public void Addition(){
+        public void Addition()
+        {
             Resultat = FirstNumber + SecondNumber;
         }
 
         /// <summary>
-        /// Cette méthode renvoie le resultat de la soustraction de deux nombres
+        /// Cette méthode renvoie le resultat de la soustraction de deux nombres et renseigne la props Resultat
         /// </summary>
         /// <returns></returns>
-        public void Soustraction(){
+        public void Soustraction()
+        {
             Resultat = FirstNumber - SecondNumber;
         }
 
         /// <summary>
-        /// Cette méthode renvoie le resultat de la multiplication de deux nombres
+        /// Cette méthode renvoie le resultat de la multiplication de deux nombres et renseigne la props Resultat
         /// </summary>
         /// <returns></returns>
-        public void Multiplication(){
+        public void Multiplication()
+        {
             Resultat = FirstNumber * SecondNumber;
         }
 
         /// <summary>
-        /// Cette méthode renvoie le resultat de la division de deux nombres
+        /// Cette méthode renvoie le resultat de la division de deux nombres et renseigne la props Resultat
         /// </summary>
         /// <returns></returns>
-        public void Division(){
-            if (SecondNumber == 0){
+        public void Division()
+        {
+            if (SecondNumber == 0)
+            {
                 Resultat = 0;
             }
             Resultat = FirstNumber / SecondNumber;
         }
 
         /// <summary>
-        /// Cette méthode renvoie le reste de la division de deux nombres
+        /// Cette méthode renvoie le reste de la division de deux nombres et renseigne la props Resultat
         /// </summary>
         /// <returns></returns>
-        public void Modulo(){
+        public void Modulo()
+        {
             Resultat = FirstNumber % SecondNumber;
         }
     }
