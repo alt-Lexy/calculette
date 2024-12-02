@@ -1,7 +1,6 @@
 ﻿using calculator;
 
 Calculator operation = new();
-int res = 0;
 
 operation.Logger("Saisir le premier nombre");
 int firstNb = int.Parse(Console.ReadLine());
