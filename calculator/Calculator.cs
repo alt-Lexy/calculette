@@ -40,7 +40,6 @@ namespace calculator
                 modulo.Excute();
                 return;
             }
-            logger.LoggerFn("Opérateur non reconnu");
         }
     }
 }

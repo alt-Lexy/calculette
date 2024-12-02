@@ -19,6 +19,7 @@ Operation res;
 
 if (!signList.Contains(sign))
 {
+    logger.LoggerFn("Opérateur non reconnu");
     return;
 };
 
