@@ -5,7 +5,8 @@ namespace calculator.Operations
         public Division(int firstNumber, int secondNumber) : base(firstNumber, secondNumber)
         {
         }
-        public void Excute()
+
+        public override void Excute()
         {
             if (SecondNumber == 0)
             {

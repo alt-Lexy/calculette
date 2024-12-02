@@ -14,32 +14,8 @@ namespace calculator
 
         public void Execute()
         {
-            Logger logger = new();
-            if (Operation is Addition addition)
-            {
-                addition.Excute();
-                return;
-            }
-            if (Operation is Soustraction soustraction)
-            {
-                soustraction.Excute();
-                return;
-            }
-            if (Operation is Multiplication multiplication)
-            {
-                multiplication.Excute();
-                return;
-            }
-            if (Operation is Division division)
-            {
-                division.Excute();
-                return;
-            }
-            if (Operation is Modulo modulo)
-            {
-                modulo.Excute();
-                return;
-            }
+            Operation.Excute();
+
         }
     }
 }
