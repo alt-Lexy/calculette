@@ -1,4 +1,5 @@
 ﻿using calculator;
+using calculator.Operations;
 
 Logger logger = new();
 
@@ -8,31 +9,43 @@ var firstNb = int.Parse(Console.ReadLine());
 logger.LoggerFn("Saisir le deuxième nombre");
 var secondNb = int.Parse(Console.ReadLine());
 
-Calculator operation = new(firstNb, secondNb);
-
 logger.LoggerFn("Sasir l'opérateur : + ou - ou * ou / ou %");
 string sign = Console.ReadLine();
+
+// je n'utilise pas de List ou List tuple car je connais la taille de mon tableau
+string[] signList = ["+", "-", "/", "*", "%"];
+
+Operation res;
+
+if (!signList.Contains(sign))
+{
+    return;
+};
+
+logger.LoggerFn($"{signList.Contains(sign)}");
 
 switch (sign)
 {
     case "+":
-        operation.Addition();
+        res = new Addition(firstNb, secondNb);
         break;
     case "-":
-        operation.Soustraction();
+        res = new Soustraction(firstNb, secondNb);
         break;
     case "*":
-        operation.Multiplication();
+        res = new Multiplication(firstNb, secondNb);
         break;
     case "/":
-        operation.Division();
+        res = new Division(firstNb, secondNb);
         break;
     case "%":
-        operation.Modulo();
+        res = new Modulo(firstNb, secondNb);
         break;
     default:
-        logger.LoggerFn("Operateur non reconnu");
-        break;
+        return;
 }
 
-logger.LoggerFn($"Le résultat de votre opération est : {operation.Resultat}");
+Calculator operationFn = new(res);
+operationFn.Execute();
+
+logger.LoggerFn($"Le résultat de votre opération est : {operationFn.Resultat}");
