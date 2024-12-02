@@ -1,14 +1,16 @@
 ﻿using calculator;
 
-Calculator operation = new();
+Logger logger = new();
 
-operation.Logger("Saisir le premier nombre");
-operation.FirstNumber = int.Parse(Console.ReadLine());
+logger.LoggerFn("Saisir le premier nombre");
+var firstNb = int.Parse(Console.ReadLine());
 
-operation.Logger("Saisir le deuxième nombre");
-operation.SecondNumber = int.Parse(Console.ReadLine());
+logger.LoggerFn("Saisir le deuxième nombre");
+var secondNb = int.Parse(Console.ReadLine());
 
-operation.Logger("Sasir l'opérateur : + ou - ou * ou / ou %");
+Calculator operation = new(firstNb, secondNb);
+
+logger.LoggerFn("Sasir l'opérateur : + ou - ou * ou / ou %");
 string sign = Console.ReadLine();
 
 switch (sign)
@@ -29,8 +31,8 @@ switch (sign)
         operation.Modulo();
         break;
     default:
-        operation.Logger("Operateur non reconnu");
+        logger.LoggerFn("Operateur non reconnu");
         break;
 }
 
-operation.Logger($"Le résultat de votre opération est : {operation.Resultat}");
+logger.LoggerFn($"Le résultat de votre opération est : {operation.Resultat}");
