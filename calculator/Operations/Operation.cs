@@ -1,6 +1,6 @@
 namespace calculator.Operations
 {
-    public class Operation
+    public abstract class Operation
     {
         public int Resultat { get; set; }
         public int FirstNumber { get; }
@@ -12,5 +12,7 @@ namespace calculator.Operations
             FirstNumber = firstNumber;
             SecondNumber = secondNumber;
         }
+
+        public abstract void Excute();
     }
 }

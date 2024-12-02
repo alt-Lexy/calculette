@@ -23,7 +23,7 @@ if (!signList.Contains(sign))
     return;
 };
 
-logger.LoggerFn($"{signList.Contains(sign)}");
+logger.LoggerFn($"Opérateur reconnu: {signList.Contains(sign)}");
 
 switch (sign)
 {
