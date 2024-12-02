@@ -3,35 +3,34 @@
 Calculator operation = new();
 
 operation.Logger("Saisir le premier nombre");
-int firstNb = int.Parse(Console.ReadLine());
+operation.FirstNumber = int.Parse(Console.ReadLine());
 
 operation.Logger("Saisir le deuxième nombre");
-int secondNb = int.Parse(Console.ReadLine());
+operation.SecondNumber = int.Parse(Console.ReadLine());
 
 operation.Logger("Sasir l'opérateur : + ou - ou * ou / ou %");
 string sign = Console.ReadLine();
 
-int result;
 switch (sign)
 {
     case "+":
-        result = operation.Addition(firstNb, secondNb);
+        operation.Addition();
         break;
     case "-":
-        result = operation.Soustraction(firstNb, secondNb);
+        operation.Soustraction();
         break;
     case "*":
-        result = operation.Multiplication(firstNb, secondNb);
+        operation.Multiplication();
         break;
     case "/":
-        result = operation.Division(firstNb, secondNb);
+        operation.Division();
         break;
     case "%":
-        result = operation.Modulo(firstNb, secondNb);
+        operation.Modulo();
         break;
     default:
-        result = 0;
+        operation.Logger("Operateur non reconnu");
         break;
 }
 
-operation.Logger($"Le résultat de votre opération est : {result}");
+operation.Logger($"Le résultat de votre opération est : {operation.Resultat}");

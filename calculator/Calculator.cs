@@ -4,6 +4,9 @@ namespace calculator
 {
     public class Calculator
     {
+        public int Resultat { get; set; }
+        public int FirstNumber { get; set; }
+        public int SecondNumber { get; set; }
         /// <summary>
         /// Cette méthod permet de logger
         /// </summary>
@@ -13,61 +16,46 @@ namespace calculator
         }
 
         /// <summary>
-        /// Cette méthode renvoie le resultat de l'addition de deux nombres
+        /// Cette méthode renvoie le resultat de l'addition de deux nombres et renseigne la props Resultat
         /// </summary>
-        /// <param name="firstNb"></param>
-        /// <param name="secondNb"></param>
         /// <returns></returns>
-        public int Addition(int firstNb, int secondNb){
-            return firstNb + secondNb;
+        public void Addition(){
+            Resultat = FirstNumber + SecondNumber;
         }
 
         /// <summary>
         /// Cette méthode renvoie le resultat de la soustraction de deux nombres
         /// </summary>
-        /// <param name="firstNb"></param>
-        /// <param name="secondNb"></param>
         /// <returns></returns>
-        public int Soustraction(int firstNb, int secondNb){
-            return firstNb - secondNb;
+        public void Soustraction(){
+            Resultat = FirstNumber - SecondNumber;
         }
 
         /// <summary>
         /// Cette méthode renvoie le resultat de la multiplication de deux nombres
         /// </summary>
-        /// <param name="firstNb"></param>
-        /// <param name="secondNb"></param>
         /// <returns></returns>
-        public int Multiplication(int firstNb, int secondNb){
-            return firstNb * secondNb;
+        public void Multiplication(){
+            Resultat = FirstNumber * SecondNumber;
         }
 
         /// <summary>
         /// Cette méthode renvoie le resultat de la division de deux nombres
         /// </summary>
-        /// <param name="firstNb"></param>
-        /// <param name="secondNb"></param>
         /// <returns></returns>
-        public int Division(int firstNb, int secondNb){
-            if (secondNb == 0){
-                return 0;
+        public void Division(){
+            if (SecondNumber == 0){
+                Resultat = 0;
             }
-            return firstNb / secondNb;
+            Resultat = FirstNumber / SecondNumber;
         }
 
         /// <summary>
         /// Cette méthode renvoie le reste de la division de deux nombres
         /// </summary>
-        /// <param name="firstNb"></param>
-        /// <param name="secondNb"></param>
         /// <returns></returns>
-        public int Modulo(int firstNb, int secondNb){
-            return firstNb % secondNb;
-        }
-
-        public static implicit operator Calculator(string v)
-        {
-            throw new NotImplementedException();
+        public void Modulo(){
+            Resultat = FirstNumber % SecondNumber;
         }
     }
 }
