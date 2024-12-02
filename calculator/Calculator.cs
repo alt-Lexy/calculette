@@ -5,15 +5,13 @@ namespace calculator
     public class Calculator
     {
         public int Resultat { get; set; }
-        public int FirstNumber { get; set; }
-        public int SecondNumber { get; set; }
-        /// <summary>
-        /// Cette méthod permet de logger
-        /// </summary>
-        /// <param name="valeur"></param>
-        public void Logger(string valeur)
-        {
-            Console.WriteLine(valeur);
+        public int FirstNumber { get; }
+        public int SecondNumber { get; }
+
+        // Constructor
+        public Calculator(int firstNumber, int secondNumber){
+            FirstNumber = firstNumber;
+            SecondNumber = secondNumber;
         }
 
         /// <summary>
