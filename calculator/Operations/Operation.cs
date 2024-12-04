@@ -1,6 +1,6 @@
 namespace calculator.Operations
 {
-    public abstract class Operation: IOperation
+    public abstract class Operation : IOperation
     {
         public int Resultat { get; protected set; }
         protected int FirstNumber { get; }
