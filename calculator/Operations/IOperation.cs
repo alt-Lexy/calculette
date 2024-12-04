@@ -1,5 +1,3 @@
-using System;
-
 namespace calculator.Operations
 {
     public interface IOperation

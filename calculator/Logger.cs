@@ -1,6 +1,4 @@
-using System;
-
-namespace calculator
+namespace sharp.calculator
 {
     public class Logger
     {

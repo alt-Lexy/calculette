@@ -1,5 +1,49 @@
 ﻿using calculator;
 using calculator.Operations;
+using sharp.calculator;
+
+// ----------------------------------------------
+/*Console.WriteLine("Enter your age");
+string age = Console.ReadLine();
+int adult = 18;
+int ageParsed = int.Parse(age);
+
+if (ageParsed >= adult)
+{
+    Console.WriteLine($"Vous etes majeur");
+    return; // si la personne est majeur c'est inutile d'aller plus loin, c'est pour ca que je mets l'instruction return 
+}
+
+Console.WriteLine($"Vous etes mineur");*/
+
+// ----------------------------------------------
+
+/*Console.WriteLine("Enter your name");
+string name = Console.ReadLine();
+Console.WriteLine($"Hello, {name}");
+int age = 6;
+// interpolation can be enhanced, i want to test int.toString
+Console.WriteLine($"j'ai {age.ToString()} d'experience en developpement");*/
+
+
+// ----------------------------------------------
+
+/*try
+{
+    Console.WriteLine("Enter your name");
+    string name = Console.ReadLine();
+    Console.WriteLine("Hello, " + name);
+    Console.WriteLine("enter your age");
+    int age = int.Parse(Console.ReadLine());
+    Console.WriteLine("Merci, nous avons pris en compte votre age");
+}
+catch (Exception)
+{
+    Console.WriteLine("votre age n'est pas correct");
+    throw;
+}*/
+// ----------------------------------------------
+
 
 Logger logger = new();
 
