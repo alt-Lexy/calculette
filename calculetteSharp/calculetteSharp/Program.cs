@@ -93,4 +93,9 @@ switch (sign)
 Calculator operationFn = new(res);
 operationFn.Execute();
 
-logger.LoggerFn($"Le résultat de votre opération est : {operationFn.Resultat}");
+/*logger.LoggerFn($"Le résultat de votre opération est : {operationFn.Resultat}");*/
+
+StringBuilder stringBuilder = new StringBuilder();
+stringBuilder.Append("Le résultat de votre opération est: ").Append(operationFn.Resultat);
+logger.LoggerFn(stringBuilder.ToString());
+
