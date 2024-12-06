@@ -63,7 +63,7 @@ namespace calcuetteSharp.Tests
                 Console.WriteLine(e.ToString());
                 throw;
             }
-        }     
+        }
 
         [Fact]
         public void DivisionFunction_Division_ReturnVoid()
