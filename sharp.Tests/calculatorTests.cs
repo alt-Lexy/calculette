@@ -8,7 +8,7 @@ namespace calcuetteSharp.Tests
         [Fact]
         public void AdditionFunction_Addition_ReturnVoid()
         {
-           try
+            try
             {
                 int firstNb = 2;
                 int secondNb = 10;
@@ -63,7 +63,7 @@ namespace calcuetteSharp.Tests
                 Console.WriteLine(e.ToString());
                 throw;
             }
-        }
+        }     
 
         [Fact]
         public void DivisionFunction_Division_ReturnVoid()
