@@ -51,7 +51,7 @@ var secondNb = 0;
 var firstNbValid = false;
 var secondNbValid = false;
 
-/* les deux methodes pourraient être factorisées en une method saisir() */
+/* les deux instructions pourraient être factorisées en une method saisir() */
 
 while (firstNbValid == false)
 {
