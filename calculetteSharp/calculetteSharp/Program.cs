@@ -1,6 +1,6 @@
-﻿using calculator;
-using calculator.Operations;
-using sharp.calculator;
+﻿using System.Text;
+using calculette.calcul;
+using calculette.calcul.Operations;
 
 // ----------------------------------------------
 /*Console.WriteLine("Enter your age");
@@ -46,12 +46,60 @@ catch (Exception)
 
 
 Logger logger = new();
+var firstNb = 0;
+var secondNb = 0;
+var firstNbValid = false;
+var secondNbValid = false;
 
-logger.LoggerFn("Saisir le premier nombre");
-var firstNb = int.Parse(Console.ReadLine());
+/* les deux methodes pourraient être factorisées en une method saisir() */
 
-logger.LoggerFn("Saisir le deuxième nombre");
-var secondNb = int.Parse(Console.ReadLine());
+while (firstNbValid == false)
+{
+    logger.LoggerFn("Saisir le premier nombre");
+    string firstNb_str = Console.ReadLine();
+    try
+    {
+        firstNb = int.Parse(firstNb_str);
+        if (firstNb < 0)
+        {
+            firstNbValid = false;
+            continue;
+        }
+
+        firstNbValid = true;
+
+    }
+    catch (Exception e)
+    {
+
+        logger.LoggerFn($"Err, vous devez rentrer un nombre. Details: {e.Message}");
+    }
+
+}
+
+while (secondNbValid == false)
+{
+    logger.LoggerFn("Saisir le deuxième nombre");
+    string secondNb_str = Console.ReadLine();
+    try
+    {
+
+        secondNb = int.Parse(secondNb_str);
+        if (secondNb < 0)
+        {
+            secondNbValid = false;
+            continue;
+        }
+        secondNbValid = true;
+
+    }
+    catch (Exception e)
+    {
+
+        logger.LoggerFn($"Err, vous devez rentrer un nombre. Details: {e.Message}");
+    }
+
+}
 
 logger.LoggerFn("Sasir l'opérateur : + ou - ou * ou / ou %");
 string sign = Console.ReadLine();
