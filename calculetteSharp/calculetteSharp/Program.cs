@@ -48,13 +48,13 @@ catch (Exception)
 Logger logger = new();
 var firstNb = 0;
 var secondNb = 0;
-var firstNbValid = false;
-var secondNbValid = false;
 
 
-void sasir(bool isValidNb, string typeNombre)
+void sasir(string typeNombre)
 {
-    while (isValidNb == false)
+    var isValidNb = false;
+
+    while (isValidNb.Equals(false))
     {
         logger.LoggerFn($"Saisir le {typeNombre} nombre");
         string nb_str = Console.ReadLine();
@@ -67,7 +67,7 @@ void sasir(bool isValidNb, string typeNombre)
                 continue;
             }
 
-            if (typeNombre == "premier")
+            if (typeNombre.Equals("premier"))
             {
                 firstNb += operartionNb;
                 break;
@@ -87,8 +87,8 @@ void sasir(bool isValidNb, string typeNombre)
     }
 }
 
-sasir(firstNbValid, "premier");
-sasir(secondNbValid, "second");
+sasir("premier");
+sasir("second");
 
 logger.LoggerFn("Sasir l'opérateur : + ou - ou * ou / ou %");
 string sign = Console.ReadLine();
