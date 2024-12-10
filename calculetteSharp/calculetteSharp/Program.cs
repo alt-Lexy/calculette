@@ -51,55 +51,44 @@ var secondNb = 0;
 var firstNbValid = false;
 var secondNbValid = false;
 
-/* les deux instructions pourraient être factorisées en une method saisir() */
 
-while (firstNbValid == false)
+void sasir(bool isValidNb, string typeNombre)
 {
-    logger.LoggerFn("Saisir le premier nombre");
-    string firstNb_str = Console.ReadLine();
-    try
+    while (isValidNb == false)
     {
-        firstNb = int.Parse(firstNb_str);
-        if (firstNb < 0)
+        logger.LoggerFn($"Saisir le {typeNombre} nombre");
+        string nb_str = Console.ReadLine();
+        try
         {
-            firstNbValid = false;
-            continue;
+            var operartionNb = int.Parse(nb_str);
+            if (operartionNb < 0)
+            {
+                isValidNb = false;
+                continue;
+            }
+
+            if (typeNombre == "premier")
+            {
+                firstNb += operartionNb;
+                break;
+            }
+
+            secondNb += operartionNb;
+
+            isValidNb = true;
+
+        }
+        catch (Exception e)
+        {
+
+            logger.LoggerFn($"Err, vous devez rentrer un nombre valid. Details: {e.Message}");
         }
 
-        firstNbValid = true;
-
     }
-    catch (Exception e)
-    {
-
-        logger.LoggerFn($"Err, vous devez rentrer un nombre. Details: {e.Message}");
-    }
-
 }
 
-while (secondNbValid == false)
-{
-    logger.LoggerFn("Saisir le deuxième nombre");
-    string secondNb_str = Console.ReadLine();
-    try
-    {
-
-        secondNb = int.Parse(secondNb_str);
-        if (secondNb < 0)
-        {
-            secondNbValid = false;
-            continue;
-        }
-        secondNbValid = true;
-
-    }
-    catch (Exception e)
-    {
-
-        logger.LoggerFn($"Err, vous devez rentrer un nombre. Details: {e.Message}");
-    }
-
-}
+sasir(firstNbValid, "premier");
+sasir(secondNbValid, "second");
 
 logger.LoggerFn("Sasir l'opérateur : + ou - ou * ou / ou %");
 string sign = Console.ReadLine();
