@@ -2,6 +2,8 @@
 using calculette.calcul;
 using calculette.calcul.Operations;
 
+Console.ForegroundColor = ConsoleColor.Green;
+
 // ----------------------------------------------
 /*Console.WriteLine("Enter your age");
 string age = Console.ReadLine();
